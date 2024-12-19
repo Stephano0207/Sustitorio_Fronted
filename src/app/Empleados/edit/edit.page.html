@@ -1,13 +1,49 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>edit</ion-title>
+    <ion-title>Inicio Empleados</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">edit</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
+  <ion-list>
+    <ion-item>
+
+      <ion-input  [(ngModel)]="Nomempleado" label="Nombre Empleado" type="text" placeholder="Ingresar su nombre"></ion-input>
+    </ion-item>
+    <ion-item>
+
+      <ion-input  [(ngModel)]="Apeempleado" label="Apellido del empleado" type="text" placeholder="Ingresar su apellido"></ion-input>
+    </ion-item>
+    <ion-item>
+
+      <ion-item>
+
+        <ion-select [(ngModel)]="CodDepartamento" label="Departamentos" placeholder="Seleccione un departamento" >
+          <ion-select-option *ngFor="let d of departamentos" value="{{d.CodDepartamento}}">{{d.Desdepartamento}}</ion-select-option>
+
+        </ion-select>
+      </ion-item>
+
+    </ion-item>
+    <ion-item>
+
+      <ion-input  [(ngModel)]="Dirempleado" label="Direccion del empleado" type="text" placeholder="Ingresar su direccion"></ion-input>
+    </ion-item>
+
+<ion-row>
+  <ion-col >
+    <ion-button type="button" (click)="actualizar()" >
+      <ion-icon slot="start" name="add"></ion-icon>
+     Registrar
+    </ion-button>
+  </ion-col>
+</ion-row>
+
+
+</ion-list>
+
+
+
+
 </ion-content>

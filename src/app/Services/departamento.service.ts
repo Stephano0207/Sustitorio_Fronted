@@ -27,4 +27,8 @@ export class DepartamentoService {
   update(departamento:any,id:any){
     return this.http.put(this.url+"/"+id,departamento);
   }
+
+  dataGraf(){
+
+  }
 }
