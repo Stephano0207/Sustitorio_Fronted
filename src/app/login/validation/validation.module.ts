@@ -9,12 +9,14 @@ import { ValidationPageRoutingModule } from './validation-routing.module';
 import { ValidationPage } from './validation.page';
 
 @NgModule({
+  // declarations: [ValidationPage],
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ValidationPageRoutingModule
+    ValidationPageRoutingModule,
+    // ValidationPage
   ],
-  declarations: [ValidationPage]
+
 })
 export class ValidationPageModule {}

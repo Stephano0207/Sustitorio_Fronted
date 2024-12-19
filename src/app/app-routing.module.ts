@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'validation',
     pathMatch: 'full'
   },
   {
@@ -16,25 +16,21 @@ const routes: Routes = [
     loadChildren: () => import('./login/validation/validation.module').then( m => m.ValidationPageModule)
   },
   {
-    path: 'create',
-    loadChildren: () => import('./empleado/create/create.module').then( m => m.CreatePageModule)
+    path: 'departamento/create',
+    loadChildren: () => import('./Departamentos/create/create.module').then( m => m.CreatePageModule)
   },
   {
-    path: 'edit',
-    loadChildren: () => import('./empleado/edit/edit.module').then( m => m.EditPageModule)
+    path: 'departamento/edit',
+    loadChildren: () => import('./Departamentos/edit/edit.module').then( m => m.EditPageModule)
   },
-  {
-    path: 'edit',
-    loadChildren: () => import('./departamento/edit/edit.module').then( m => m.EditPageModule)
-  },
-  {
-    path: 'create',
-    loadChildren: () => import('./departamento/create/create.module').then( m => m.CreatePageModule)
-  },
-  {
-    path: 'grafico',
-    loadChildren: () => import('./departamento/grafico/grafico.module').then( m => m.GraficoPageModule)
-  },
+  // {
+  //   path: 'empleado/create',
+  //   loadChildren: () => import('./Empleados/create/create.module').then( m => m.CreatePageModule)
+  // },
+  // {
+  //   path: 'empleado/edit',
+  //   loadChildren: () => import('./Empleados/edit/edit.module').then( m => m.EditPageModule)
+  // },
 ];
 
 @NgModule({
