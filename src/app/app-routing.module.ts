@@ -20,15 +20,23 @@ const routes: Routes = [
     loadChildren: () => import('./Departamentos/create/create.module').then( m => m.CreatePageModule)
   },
   {
-    path: 'departamento/edit',
+    path: 'departamento/edit/:id',
     loadChildren: () => import('./Departamentos/edit/edit.module').then( m => m.EditPageModule)
+  },
+  {
+    path: 'create',
+    loadChildren: () => import('./Empleados/create/create.module').then( m => m.CreatePageModule)
+  },
+  {
+    path: 'edit',
+    loadChildren: () => import('./Empleados/edit/edit.module').then( m => m.EditPageModule)
   },
   // {
   //   path: 'empleado/create',
   //   loadChildren: () => import('./Empleados/create/create.module').then( m => m.CreatePageModule)
   // },
   // {
-  //   path: 'empleado/edit',
+  //   path: 'empleado/edit/:id',
   //   loadChildren: () => import('./Empleados/edit/edit.module').then( m => m.EditPageModule)
   // },
 ];
