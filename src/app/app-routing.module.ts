@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'validation',
+    loadChildren: () => import('./login/validation/validation.module').then( m => m.ValidationPageModule)
+  },
 ];
 
 @NgModule({
