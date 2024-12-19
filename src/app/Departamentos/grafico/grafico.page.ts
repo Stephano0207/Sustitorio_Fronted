@@ -4,13 +4,13 @@ import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { RouterModule } from '@angular/router';
-
 @Component({
-  selector: 'app-create',
-  templateUrl: './create.page.html',
-  styleUrls: ['./create.page.scss'], imports:[CommonModule, FormsModule, IonicModule,RouterModule]
+  selector: 'app-grafico',
+  templateUrl: './grafico.page.html',
+  styleUrls: ['./grafico.page.scss'],
+  imports:[CommonModule, FormsModule, IonicModule,RouterModule]
 })
-export class CreatePage implements OnInit {
+export class GraficoPage implements OnInit {
 
   constructor() { }
 

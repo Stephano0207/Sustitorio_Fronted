@@ -24,21 +24,17 @@ const routes: Routes = [
     loadChildren: () => import('./Departamentos/edit/edit.module').then( m => m.EditPageModule)
   },
   {
-    path: 'create',
+    path: 'empleado/create',
     loadChildren: () => import('./Empleados/create/create.module').then( m => m.CreatePageModule)
   },
   {
-    path: 'edit',
+    path: 'empleado/edit/:id',
     loadChildren: () => import('./Empleados/edit/edit.module').then( m => m.EditPageModule)
   },
-  // {
-  //   path: 'empleado/create',
-  //   loadChildren: () => import('./Empleados/create/create.module').then( m => m.CreatePageModule)
-  // },
-  // {
-  //   path: 'empleado/edit/:id',
-  //   loadChildren: () => import('./Empleados/edit/edit.module').then( m => m.EditPageModule)
-  // },
+  {
+    path: 'grafico',
+    loadChildren: () => import('./Departamentos/grafico/grafico.module').then( m => m.GraficoPageModule)
+  },
 ];
 
 @NgModule({

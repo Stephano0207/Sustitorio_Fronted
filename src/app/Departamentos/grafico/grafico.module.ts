@@ -4,18 +4,18 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { EditPageRoutingModule } from './edit-routing.module';
+import { GraficoPageRoutingModule } from './grafico-routing.module';
 
-import { EditPage } from './edit.page';
+import { GraficoPage } from './grafico.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    EditPageRoutingModule,
-    EditPage
+    GraficoPageRoutingModule,
+    GraficoPage
   ],
-  // declarations: [EditPage]
+  // declarations: [GraficoPage]
 })
-export class EditPageModule {}
+export class GraficoPageModule {}
