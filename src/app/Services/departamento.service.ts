@@ -29,6 +29,6 @@ export class DepartamentoService {
   }
 
   dataGraf(){
-
+    return this.http.get(this.url+"/grafico/total")
   }
 }

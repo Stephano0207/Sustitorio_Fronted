@@ -7,7 +7,7 @@
 <ion-content [fullscreen]="true">
   <ion-row>
     <ion-col >
-      <ion-button type="button"  >
+      <ion-button routerLink="/grafico" type="button"  color="danger">
         <ion-icon slot="start" name="analytics-outline"></ion-icon>
        Visualizar Grafico
       </ion-button>
@@ -22,7 +22,7 @@
 
 <ion-row>
   <ion-col >
-    <ion-button type="button" (click)="registrar()" >
+    <ion-button type="button" color="secondary" (click)="registrar()" >
       <ion-icon slot="start" name="add"></ion-icon>
      Registrar
     </ion-button>

@@ -1,13 +1,18 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>grafico</ion-title>
+    <ion-title>Total empleados por grafico</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">grafico</ion-title>
+      <ion-title size="large">Total de empleados por departamento</ion-title>
     </ion-toolbar>
   </ion-header>
+  <!-- <ion-button expand="full" (click)="renderizarGrafico()">Obtener Grafico</ion-button> -->
+  <div>
+    <canvas id="ventasChart"></canvas>
+  </div>
+
 </ion-content>
