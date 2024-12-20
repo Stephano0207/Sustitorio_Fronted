@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { CreatePageRoutingModule } from './create-routing.module';
-
+import {  ReactiveFormsModule } from '@angular/forms';
 import { CreatePage } from './create.page';
 
 @NgModule({
@@ -14,7 +14,8 @@ import { CreatePage } from './create.page';
     FormsModule,
     IonicModule,
     CreatePageRoutingModule,
-    CreatePage
+    CreatePage,
+    ReactiveFormsModule
   ],
   // declarations: [CreatePage]
 })

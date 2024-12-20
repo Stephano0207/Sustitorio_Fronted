@@ -15,6 +15,12 @@
   </ion-row>
   <ion-list>
     <ion-item>
+      <ion-input [(ngModel)]="CodDepartamento"  maxlength="2" label="Ingresar Codigo departamento" type="text" placeholder="Ingresar codigo"></ion-input>
+    </ion-item>
+    <!-- <ion-text color="danger" *ngIf="myForm.controls['CodDepartamento'].hasError('maxlength')">
+      Máximo de 2 caracteres permitidos.
+    </ion-text> -->
+    <ion-item>
 
       <ion-input  [(ngModel)]="Desdepartamento" label="Descripcion departamento" type="text" placeholder="Ingresar la descripcion"></ion-input>
     </ion-item>
@@ -41,6 +47,7 @@
 
     <ion-item lines="inset" *ngFor="let a of departamentos">
       <ion-label>
+      Codigo : {{a.CodDepartamento}} --
       Descripcion:  {{ a.Desdepartamento }}
       </ion-label>
       <div class="item-note">

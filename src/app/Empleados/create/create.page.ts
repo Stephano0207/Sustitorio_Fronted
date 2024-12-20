@@ -17,6 +17,7 @@ export class CreatePage implements OnInit {
   Apeempleado:any;
   CodDepartamento:any;
   Dirempleado:any;
+  Codempleado:any;
 
 
   empleados:any=[];
@@ -59,6 +60,7 @@ export class CreatePage implements OnInit {
       Apeempleado:this.Apeempleado,
       CodDepartamento:this.CodDepartamento,
       Dirempleado:this.Dirempleado,
+      Codempleado:this.Codempleado
     }
 console.log(data);
     this.serviceEmpl.create(data).subscribe((res: any) => {
@@ -67,6 +69,7 @@ console.log(data);
       this.Apeempleado="";
       this.CodDepartamento="";
       this.Dirempleado="";
+      this.Codempleado="";
       this.getAll();
     }, (error: any) => {
       console.log("Error====", error)

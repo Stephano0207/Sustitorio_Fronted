@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { RouterModule } from '@angular/router';
 import { DepartamentoService } from 'src/app/Services/departamento.service';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 @Component({
   selector: 'app-create',
   templateUrl: './create.page.html',
@@ -14,10 +15,19 @@ import { DepartamentoService } from 'src/app/Services/departamento.service';
 export class CreatePage implements OnInit {
   Desdepartamento:any;
 
-
+  CodDepartamento:any;
   departamentos:any=[];
 
-  constructor(private service:DepartamentoService) { }
+  myForm:FormGroup;
+
+  constructor(
+    private service:DepartamentoService,
+    private fb:FormBuilder
+  ) {
+    this.myForm = this.fb.group({
+      CodDepartamento: ['', [Validators.required, Validators.maxLength(2)]], // Máximo 2 caracteres
+    });
+  }
 
   ngOnInit() {
     this.getAll();
@@ -42,11 +52,13 @@ export class CreatePage implements OnInit {
   registrar() {
     let data = {
       Desdepartamento: this.Desdepartamento,
+      CodDepartamento:this.CodDepartamento
     }
-
+console.log(data)
     this.service.create(data).subscribe((res: any) => {
       console.log("Success====", data);
       this.Desdepartamento="";
+      this.CodDepartamento="";
       this.getAll();
     }, (error: any) => {
       console.log("Error====", error)
